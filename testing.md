@@ -1,6 +1,7 @@
 ---
 layout: default
-title: How to Uninstall Pre-installed Apps Using UAD-ng
+title: UAD-ng Setup and Debloat Guide (Detailed)
+nav_title: UAD-ng Guide (Detailed)
 ---
 
 # How to Uninstall Pre-installed Apps Using UAD-ng

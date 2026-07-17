@@ -1,0 +1,32 @@
+{
+  "assets": [
+    {
+      "name": "typing.svg",
+      "url": "https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&center=true&vCenter=true&width=600&lines=Tech+Enthusiast;Always+Learning+Something+New;Exploring+Operating+Systems+%26+Virtualization;Building+Cool+Things"
+    },
+    {
+      "name": "stats.svg",
+      "url": "https://github-readme-stats.vercel.app/api?username=pranjal32&show_icons=true&theme=github_dark&hide_border=true"
+    },
+    {
+      "name": "top-langs.svg",
+      "url": "https://github-readme-stats.vercel.app/api/top-langs/?username=pranjal32&layout=compact&theme=github_dark&hide_border=true"
+    },
+    {
+      "name": "streak.svg",
+      "url": "https://streak-stats.demolab.com?user=pranjal32&theme=github-dark&hide_border=true"
+    },
+    {
+      "name": "trophies.svg",
+      "url": "https://github-profile-trophy.vercel.app/?username=pranjal32&theme=darkhub&no-frame=true&row=1&column=6"
+    },
+    {
+      "name": "activity-graph.svg",
+      "url": "https://github-readme-activity-graph.vercel.app/graph?username=pranjal32&theme=github-dark&hide_border=true"
+    },
+    {
+      "name": "views.svg",
+      "url": "https://komarev.com/ghpvc/?username=pranjal32&style=for-the-badge&color=blue"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <p class="tagline">{{ site.description }}</p>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+          {% assign nav_pages = site.pages | where: "layout", "default" | sort: "title" %}
+          {% for nav_page in nav_pages %}
+            {% if nav_page.url != '/' and nav_page.title %}
+              <a href="{{ nav_page.url | relative_url }}" {% if page.url == nav_page.url %}class="active"{% endif %}>
+                {{ nav_page.nav_title | default: nav_page.title }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="wrap">
+        <article class="content-card">
+          {{ content }}
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <small>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</small>
+      </div>
+    </footer>
+  </body>
+</html>

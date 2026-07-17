@@ -4,7 +4,7 @@
 
 ### Tech Enthusiast • Chandigarh, India 🇮🇳
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&center=true&vCenter=true&width=600&lines=Tech+Enthusiast;Always+Learning+Something+New;Exploring+Operating+Systems+%26+Virtualization;Building+Cool+Things" alt="Typing SVG" />
+<img src="https://raw.githubusercontent.com/pranjal32/pranjal32/output/profile-assets/typing.svg" alt="Typing SVG" />
 
 </div>
 
@@ -30,12 +30,12 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=pranjal32&show_icons=true&theme=github_dark&hide_border=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pranjal32&layout=compact&theme=github_dark&hide_border=true" />
+  <img height="170" src="https://raw.githubusercontent.com/pranjal32/pranjal32/output/profile-assets/stats.svg" />
+  <img height="170" src="https://raw.githubusercontent.com/pranjal32/pranjal32/output/profile-assets/top-langs.svg" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=pranjal32&theme=github-dark&hide_border=true" />
+  <img src="https://raw.githubusercontent.com/pranjal32/pranjal32/output/profile-assets/streak.svg" />
 </p>
 
 ---
@@ -43,7 +43,7 @@
 ## 🏆 GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=pranjal32&theme=darkhub&no-frame=true&row=1&column=6" />
+  <img src="https://raw.githubusercontent.com/pranjal32/pranjal32/output/profile-assets/trophies.svg" />
 </p>
 
 ---
@@ -67,7 +67,7 @@
 ## 📈 Contribution Graph
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=pranjal32&theme=github-dark&hide_border=true" />
+  <img src="https://raw.githubusercontent.com/pranjal32/pranjal32/output/profile-assets/activity-graph.svg" />
 </p>
 
 ---
@@ -82,7 +82,7 @@
 
 <div align="center">
 
-![](https://komarev.com/ghpvc/?username=pranjal32&style=for-the-badge&color=blue)
+![](https://raw.githubusercontent.com/pranjal32/pranjal32/output/profile-assets/views.svg)
 
 ⭐ If you like my work, consider starring my repositories!
 

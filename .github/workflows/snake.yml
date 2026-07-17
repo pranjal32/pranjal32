@@ -5,6 +5,10 @@ on:
     - cron: "0 0 * * *" # Every day at 00:00 UTC
   workflow_dispatch:
 
+concurrency:
+  group: profile-artifacts
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -13,12 +17,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
+
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: pranjal32
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Cache profile widgets
+        run: |
+          python .github/scripts/cache_profile_assets.py \
+            --config .github/profile-assets.json \
+            --output-dir dist/profile-assets \
+            --workers 4
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
