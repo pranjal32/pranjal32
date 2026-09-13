@@ -15,7 +15,7 @@
       <div class="wrap">
         <a class="brand" href="{{ '/' | relative_url }}"><span class="status-dot" aria-hidden="true"></span>{{ site.title }}</a>
         <p class="tagline">{{ site.description }}</p>
-        <nav class="top-nav" aria-label="Primary">
+        <!-- <nav class="top-nav" aria-label="Primary">
           <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
           {% assign nav_pages = site.pages | where: "layout", "default" | sort: "title" %}
           {% for nav_page in nav_pages %}
@@ -25,7 +25,7 @@
               </a>
             {% endif %}
           {% endfor %}
-        </nav>
+        </nav> -->
       </div>
     </header>
 
