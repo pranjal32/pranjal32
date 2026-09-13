@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import pathlib
@@ -11,6 +12,22 @@ import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+
+def build_fallback_svg(name: str, error: str) -> bytes:
+    safe_name = html.escape(name)
+    safe_error = html.escape(error)
+    return (
+        "<svg xmlns='http://www.w3.org/2000/svg' width='800' height='120' viewBox='0 0 800 120'>"
+        "<rect width='100%' height='100%' fill='#0d1117'/>"
+        "<text x='20' y='48' fill='#f85149' font-family='sans-serif' font-size='20'>"
+        f"Unable to refresh {safe_name}"
+        "</text>"
+        "<text x='20' y='82' fill='#8b949e' font-family='sans-serif' font-size='14'>"
+        f"{safe_error}"
+        "</text>"
+        "</svg>"
+    ).encode("utf-8")
 
 
 def parse_args() -> argparse.Namespace:
@@ -51,7 +68,9 @@ def fetch_asset(
             return (name, True, f"cached ({len(payload)} bytes)")
         except (urllib.error.URLError, TimeoutError) as exc:
             if attempt >= retries:
-                return (name, False, str(exc))
+                fallback = build_fallback_svg(name, str(exc))
+                target.write_bytes(fallback)
+                return (name, True, f"fallback written after fetch failure: {exc}")
             time.sleep(min(2 ** (attempt - 1), 5))
     return (name, False, "unexpected error")
 
